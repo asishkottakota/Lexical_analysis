@@ -1,29 +1,30 @@
+## Lexical Analyzer
 
-Name: Lexical Analyzer
+### Overview
+The Lexical Analyzer is a program designed to scan C source code and identify the different tokens present within the code. These tokens can include keywords, identifiers, constants, string literals, or symbols.
 
-What did the application do: The Lexical Analyzer was my first major application. It was a program that scanned C source code and identified the different tokens in the code. The tokens could be keywords, identifiers, constants, string literals, or symbols.
+### Functionality
+The input to the Lexical Analyzer is a C source code file. Upon processing this input, the program generates a sequence of tokens along with their respective types.
 
-What were the inputs: The input to the Lexical Analyzer was a C source code file.
+### Tech Stack
+The Lexical Analyzer is implemented in the C programming language.
 
-What were the outputs: The output of the Lexical Analyzer was a sequence of tokens, along with their type.
+### Challenges
+The main challenges encountered during the implementation of the Lexical Analyzer were:
+- Identifying the various types of tokens in the C language.
+- Handling special cases such as comments and string literals.
+- Developing efficient algorithms for scanning the source code.
 
-What was the tech stack: The Lexical Analyzer was implemented in the C programming language.
+### Lexical Analysis in C
+Lexical analysis is the initial phase of a compiler, responsible for breaking down the source code into a sequence of tokens, each representing the smallest unit of meaning in the programming language.
 
-What were the main challenges: The main challenges in implementing the Lexical Analyzer were:
+In C, lexical analysis can be implemented using methods such as finite state machines (FSM). An FSM model helps in recognizing patterns within the input symbols.
 
-Identifying the different types of tokens in the C language.
-Handling special cases, such as comments and string literals.
-Efficiently scanning the source code.
-Lexical Analysis in C
+The Lexical Analyzer follows these steps:
+1. Starts in the initial state.
+2. Reads the next input symbol and transitions to the next state based on the current state and input symbol.
+3. Continues reading input symbols and transitioning to new states until reaching a final state.
+4. Upon reaching a final state, recognizes a token and outputs it, then resets to the initial state.
 
-Lexical analysis is the first phase of a compiler. It is responsible for breaking down the source code into a sequence of tokens. A token is the smallest unit of meaning in a programming language. It can be a keyword, identifier, constant, string literal, or symbol.
-
-Lexical analysis in C can be implemented using a variety of methods. One common approach is to use a finite state machine (FSM). An FSM is a model of computation that can be used to recognize patterns in a sequence of input symbols.
-
-To implement lexical analysis using an FSM, we need to define a set of states for the FSM, one for each type of token that we want to recognize. We also need to define a set of transitions between the states. The transitions are triggered by input symbols.
-
-When the Lexical Analyzer starts, it is in the initial state. It then reads the next input symbol and transitions to the next state based on the current state and the input symbol. The Lexical Analyzer continues to read input symbols and transition to new states until it reaches a final state.
-
-When the Lexical Analyzer reaches a final state, it has recognized a token. The Lexical Analyzer then outputs the token and resets to the initial state.
-
-Lexical analysis is an important part of compiler design. It is responsible for breaking down the source code into a sequence of tokens that can be understood by the rest of the compiler.
+### Conclusion
+Lexical analysis is crucial in compiler design as it forms the foundation for further processing of the source code. The Lexical Analyzer serves as a fundamental component in this process, facilitating the transformation of C source code into a structured sequence of tokens.
